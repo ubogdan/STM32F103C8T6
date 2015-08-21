@@ -34,5 +34,5 @@ make flash
 ## Hardware
 ![alt tag](https://raw.githubusercontent.com/ubogdan/STM32F103C8T6/master/jtag/STM32F103C8T6-1.jpg)
 
-![alt tag](https://raw.githubusercontent.com/ubogdan/STM32F103C8T6/master/jtag/STM32F103C8T6-1.jpg)
+![alt tag](https://raw.githubusercontent.com/ubogdan/STM32F103C8T6/master/jtag/STM32F103C8T6-2.jpg)
 
