@@ -30,17 +30,15 @@ Run command to build and flash the device
 ````
 make flash
 ````
-## Flashing Maple Boot
+
+## Flashing Maple Bootloader
 ````
-user@local ~ $ openocd -f jtag/openocd.cfg
-user@local ~ $ telnet localhost 4444
-> reset halt
-> flash write_image erase bootloader/maple_mini_boot.bin 0x08000000
-> reset run
-````
-# dmesg Output
-````
-user@local ~ $ dmesg
+$ openocd -f jtag/openocd.cfg -c "program bootloader/generic_boot20_pc13.bin 0x08000000 verify reset exit"
+
+Bootloader binary from : https://github.com/rogerclarkmelbourne/STM32duino-bootloader
+In order to enter in perpetual bootloader mode you need to put PC14 to high level imediately after hiting reset. When the slow blinks continue on forever, that means perpetual bootloader mode is active.
+
+$ dmesg
 [ 2745.356014] usb 6-1: new full-speed USB device number 49 using uhci_hcd
 [ 2745.523034] usb 6-1: New USB device found, idVendor=1eaf, idProduct=0003
 [ 2745.523038] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
