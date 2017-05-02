@@ -26,6 +26,13 @@ sudo make install
 ## Flashing target
 Edit file `jtag/openocd.conf` and chage `transport select jtag` or `transport select swd` according to your board connector
 
+Install gcc cross compiler
+````
+sudo apt install gcc-arm-none-eabi
+````
+
+Edit file `jtag/openocd.conf` and chage `transport select jtag` or `transport select swd` according to your board connector
+
 Run command to build and flash the device
 ````
 make flash
